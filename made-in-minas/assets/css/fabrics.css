@@ -1,0 +1,56 @@
+.fabrics {
+  background: var(--color-sage);
+}
+
+.fabrics > .eyebrow,
+.fabrics > h2,
+.fabric-list {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container);
+}
+
+.fabrics h2 {
+  max-width: 1190px;
+}
+
+.fabric-list {
+  border-bottom: 1px solid rgba(34, 35, 29, 0.22);
+  border-top: 1px solid rgba(34, 35, 29, 0.22);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 70px;
+}
+
+.fabric-list article {
+  border-right: 1px solid rgba(34, 35, 29, 0.22);
+  min-height: 196px;
+  padding: 42px 38px;
+}
+
+.fabric-list article:last-child {
+  border-right: 0;
+}
+
+.fabric-list h3 {
+  font-size: 28px;
+  line-height: 1.15;
+  margin-top: 44px;
+}
+
+.fabric-list p {
+  color: var(--color-muted);
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+@media (max-width: 820px) {
+  .fabric-list {
+    grid-template-columns: 1fr;
+  }
+
+  .fabric-list article {
+    border-bottom: 1px solid rgba(34, 35, 29, 0.22);
+    border-right: 0;
+  }
+}

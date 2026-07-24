@@ -1,0 +1,13 @@
+.about-intro {
+  background: var(--color-paper);
+}
+
+.about-intro h2 {
+  max-width: 930px;
+}
+
+@media (max-width: 700px) {
+  .about-intro h2 {
+    max-width: 330px;
+  }
+}
