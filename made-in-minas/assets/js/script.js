@@ -3,6 +3,7 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const header = document.querySelector("[data-header]");
 const hero = document.querySelector(".hero");
+const whatsappNumber = "5532999290352";
 let parallaxQueued = false;
 
 function updateHeader() {
@@ -113,5 +114,5 @@ quoteForm?.addEventListener("submit", (event) => {
     `Detalhes: ${formData.get("detalhes") || "-"}`
   ].join("\n");
 
-  window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
 });
