@@ -1,0 +1,245 @@
+.feedbackSection {
+  width: 100%;
+  min-height: 70vh;
+  padding: clamp(60px, 8vw, 96px) 20px;
+  background-color: #f5f2e8;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  width: min(1180px, 100%);
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #9b4420;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #9b4420;
+  font-family: "Playfair Display", "Abril Display", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.carouselWrapper {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carouselWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItems {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  padding: 15px 0;
+}
+
+.carouselItem {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 441px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: #e0d8b8;
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.12);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carouselItem:hover {
+  transform: scale(1.035);
+  box-shadow: 0 10px 28px rgba(26, 26, 26, 0.16);
+}
+
+.carouselItem:focus-visible,
+.arrowButton:focus-visible,
+.modalClose:focus-visible {
+  outline: 3px solid #9b4420;
+  outline-offset: 3px;
+}
+
+.feedbackImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.arrowButton {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #9b4420;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.arrowButton:hover {
+  transform: translateY(-1px);
+  background-color: #4a5a2a;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.82);
+}
+
+.modalContent {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modalClose {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.modalClose:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .feedbackSection {
+    padding: 56px 18px;
+    min-height: 50vh;
+  }
+
+  .sectionHeader {
+    margin-bottom: 32px;
+  }
+
+  .carouselContainer {
+    gap: 14px;
+  }
+
+  .carouselItems {
+    gap: 18px;
+    padding: 12px 0;
+  }
+
+  .carouselItem {
+    width: 280px;
+    height: 410px;
+  }
+
+  .arrowButton {
+    width: 46px;
+    height: 46px;
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    gap: 0;
+  }
+
+  .arrowButton {
+    display: none;
+  }
+
+  .carouselWrapper {
+    padding: 0 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carouselItems {
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 12px 0;
+  }
+
+  .carouselItem {
+    scroll-snap-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedbackSection {
+    padding-inline: 0;
+  }
+
+  .sectionHeader {
+    padding: 0 16px;
+  }
+
+  .carouselItem {
+    width: 72vw;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .feedbackImage {
+    object-fit: contain;
+    padding: 8px;
+    box-sizing: border-box;
+    background: #ffffff;
+  }
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap");
+
+@font-face {
+  font-family: "JUST Sans";
+  src: url("./components/assets/fonts/JUST Sans Regular.woff2") format("woff2"),
+    url("./components/assets/fonts/JUST Sans Regular.woff") format("woff"),
+    url("./components/assets/fonts/JUST Sans Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Abril Display";
+  src: url("./components/assets/fonts/Abril_Display_Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: "JUST Sans", Arial, sans-serif;
+  color: #1a1a1a;
+  background: #f5f2e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f2e8;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

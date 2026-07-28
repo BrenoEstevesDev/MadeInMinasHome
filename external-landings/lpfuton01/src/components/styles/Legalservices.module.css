@@ -1,0 +1,209 @@
+.LegalservicesSection {
+  background: #9C4725;
+  color: #FCFCF0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.LegalservicesContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 48px;
+}
+
+.Left {
+  flex: 1;
+  max-width: 760px;
+  padding: 80px 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionTitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.CardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+
+.Card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 18px;
+  padding: 22px 24px;
+  min-height: 150px;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.Card:hover {
+  transform: translateY(-4px);
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.25);
+}
+
+.IconBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+}
+
+.IconBadge svg {
+  width: 22px;
+  height: 22px;
+  color: #FCFCF0;
+}
+
+.CardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.CardText {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.88);
+}
+
+.Left {
+  flex: 0 0 50%;
+  max-width: none;
+  padding: 80px 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Right { 
+  width: 50vw; 
+  margin-left: auto; 
+  overflow: hidden; 
+  display: flex; 
+} 
+
+.MainImage { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+
+@media (max-width: 1200px) {
+  .LegalservicesContainer {
+    gap: 32px;
+  }
+
+  .Left {
+    padding: 64px 48px;
+  }
+
+  .SectionTitle {
+    font-size: 2.6rem;
+    margin-bottom: 36px;
+  }
+
+  .CardsGrid {
+    gap: 18px;
+  }
+
+  .Right {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .LegalservicesContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .Left {
+    flex: 1;
+    width: 91%;
+    padding: 56px 32px;
+  }
+
+  .CardsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .Right {
+    width: 100%;
+    margin-left: 0;
+    height: 280px;
+    padding: 0;
+  }
+
+  .MainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* 3) Mobile: tipografia e paddings mais enxutos */
+@media (max-width: 600px) {
+  .Left {
+    width: 90%;
+    padding: 36px 16px;
+  }
+
+  .SectionTitle {
+    font-size: 1.9rem;
+    margin-bottom: 24px;
+  }
+
+  .Card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .CardTitle {
+    font-size: 1.05rem;
+  }
+
+  .CardText {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .Right {
+    height: 220px; /* banner menor no mobile */
+  }
+}
+
+/* 4) Extra: telas muito pequenas */
+@media (max-width: 380px) {
+  .Left {
+    width: 93%;
+    padding: 36px 16px;
+  }
+
+  .SectionTitle {
+    font-size: 1.65rem;
+  }
+
+  .IconBadge {
+    width: 38px;
+    height: 38px;
+  }
+
+  .IconBadge svg {
+    width: 18px;
+    height: 18px;
+  }
+}

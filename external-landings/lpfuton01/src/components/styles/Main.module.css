@@ -1,0 +1,285 @@
+.StyleMain {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 48px 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.Content {
+  max-width: 700px;
+  padding: 32px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.imageLogo {
+  margin-bottom: 30px;
+}
+
+.LogoImage {
+  width: 1000px;
+  height: auto;
+  display: block;
+}
+
+.Divider {
+  background: #475127;
+  padding: 30px;
+  border-radius: 30px;
+  display: block;
+  max-width: 100%;
+  text-align: left;
+  opacity: 0.91;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.Title {
+  font-size: 2.5rem;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.Description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+
+.CTA {
+    max-width: 560px;
+    display: inline-flex;
+    margin-top: 40px;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #475127;
+    padding: 14px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 30px;
+}
+
+.CTA:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(43, 43, 43, 0.4);
+}
+
+.WhatsappIcon {
+    font-size: 40px;
+}
+
+.CTA:hover {
+  transform: translateX(4px);
+	box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    background-color: #3e4b2c;
+    color: #ffffff;
+}
+
+.dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.active {
+  background: #ffffff;
+  transform: scale(1.3);
+}
+
+@media (max-width: 1024px) {
+  .StyleMain {
+    min-height: 92vh;
+    padding: 44px 20px;
+    align-items: center;
+  }
+
+  .Content {
+    max-width: 720px;
+    padding: 24px;
+  }
+
+  .LogoImage {
+    width: 720px;
+    max-width: 100%;
+  }
+
+  .Divider {
+    padding: 26px;
+    border-radius: 26px;
+  }
+
+  .Title {
+    font-size: 2.2rem;
+  }
+
+  .CTA {
+    max-width: 360px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .StyleMain {
+    min-height: 92vh;
+    padding: 32px 16px;
+    justify-content: center;
+  }
+
+  .Content {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .imageLogo {
+    margin-bottom: 18px;
+  }
+
+  .LogoImage {
+    width: 420px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .Divider {
+    padding: 20px;
+    border-radius: 22px;
+    text-align: left;
+    opacity: 0.95;
+  }
+
+  .Title {
+    font-size: 1.8rem;
+  }
+
+  .Description {
+    font-size: 1.02rem;
+  }
+
+  .CTA {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .dots {
+    bottom: 14px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .StyleMain {
+    min-height: 100vh;
+    padding: 16px 12px 64px;
+    background-position: center top;
+  }
+
+  .Content {
+    width: 100%;
+    min-height: calc(100vh - 64px);
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  /* LOGO + TEXTO EM CIMA */
+  .imageLogo {
+    margin: 0;
+    padding-top: 8px;
+    text-align: center;
+  }
+
+  .LogoImage {
+    width: 240px;
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+
+  .Divider {
+    margin: 0;
+    padding: 14px;
+    border-radius: 16px;
+
+    background: rgba(71, 81, 39, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .Title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .Description {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  /* CTA SOZINHO EMBAIXO */
+  .CTA {
+    margin-bottom: auto; /* EMPURRA PRO FUNDO */
+    width: 90%;
+    max-width: 100%;
+    justify-content: center;
+
+    font-size: 15px;
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+
+  .WhatsappIcon {
+    font-size: 22px;
+  }
+
+  .dots {
+    bottom: 14px;
+  }
+}

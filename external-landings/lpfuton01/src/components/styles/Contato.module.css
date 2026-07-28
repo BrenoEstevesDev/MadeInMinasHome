@@ -1,0 +1,210 @@
+.StyleMain {
+  width: 100%;
+  background: #f6f2e7;
+}
+
+.Content {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 60px 0 80px;
+  gap: 20px;
+}
+
+
+.LogoImage {
+    width: 700px;
+    height: auto;
+    display: block;
+    padding-left: 30px;
+}
+
+.Divider {
+    padding-left: 30px;
+    border-radius: 30px;
+    display: block;
+    max-width: 50%;
+    text-align: left;
+    color: #475127;
+}
+.Title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.Description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+}
+
+.CTA {
+    max-width: 560px;
+	  display: inline-flex;
+    margin-top: 40px;
+    align-items: center;
+    gap: 10px;
+    background: #475127;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 30px;
+}
+
+.CTA::before {
+	margin-right: 10px;
+	transition: transform 0.15s ease;
+}
+
+.WhatsappIcon {
+    font-size: 40px;
+}
+
+.CTA:hover {
+	transform: translateX(4px);
+	box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    background-color: #ffffff;
+    color: #3e4b2c;
+}
+
+.CTA:hover::before {
+	transform: translateX(4px);
+}
+
+.RightImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.HeroImage {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media (max-width: 1024px) {
+  .Content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .Left {
+    padding: 80px 40px 60px;
+    align-items: flex-start;
+  }
+
+  .LogoImage {
+    width: 480px;
+    padding-left: 0;
+  }
+
+  .Divider {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .CTA {
+    margin-left: 0;
+  }
+
+  .RightImage {
+    height: 420px;
+    justify-content: center;
+  }
+
+  .HeroImage {
+    width: 100%;
+    height: 100%;
+    object-position: center bottom;
+  }
+
+  .Title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .Left {
+    padding: 60px 20px 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .LogoImage {
+    width: 300px;
+  }
+
+  .Divider {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .Title {
+    font-size: 1.7rem;
+  }
+
+  .Description {
+    font-size: 1rem;
+  }
+
+  .CTA {
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .WhatsappIcon {
+    font-size: 20px;
+}
+
+  .RightImage {
+    height: 300px;
+  }
+
+  .HeroImage {
+    width: 100%;
+    height: 100%;
+    object-position: center bottom;
+  }
+}
+
+@media (max-width: 480px) {
+  .Left {
+    padding: 40px 16px;
+  }
+
+  .LogoImage {
+    width: 240px;
+  }
+
+  .Title {
+    font-size: 1.5rem;
+  }
+
+  .RightImage {
+    height: 240px;
+  }
+}

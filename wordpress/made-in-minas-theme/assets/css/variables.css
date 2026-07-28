@@ -1,0 +1,19 @@
+:root {
+  --color-ink: #22231d;
+  --color-muted: #555952;
+  --color-cream: #f7f3ed;
+  --color-paper: #fffdfa;
+  --color-line: #d8d0c5;
+  --color-charcoal: #1f211a;
+  --color-rust: #8d4934;
+  --color-rust-light: #bd6548;
+  --color-sage: #dfe5d9;
+  --color-olive: #707b62;
+  --color-rose: #e4c2b7;
+  --color-sand: #e9dfcf;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --container: 1660px;
+  --side: clamp(24px, 6.5vw, 120px);
+  --header-height: 132px;
+}

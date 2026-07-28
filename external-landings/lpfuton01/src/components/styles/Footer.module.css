@@ -1,0 +1,82 @@
+.Footer {
+  background: #475127;
+  padding: 20px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Content {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+  text-align: center;
+}
+
+.LogoImage {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.FooterContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 0.95rem;
+  color: #FCFCF0;
+}
+
+.FooterContact p {
+  margin: 0;
+}
+
+.FooterContact a {
+  color: #FCFCF0;
+  text-decoration: none;
+  font-weight: 500;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.FooterContact a:hover {
+  text-decoration: underline;
+}
+
+.InstagramIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.Description {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #FCFCF0;
+}
+
+@media (max-width: 600px) {
+  .LogoImage {
+    height: 52px;
+  }
+
+  .FooterContact {
+    font-size: 0.9rem;
+  }
+
+  .Description {
+    font-size: 0.8rem;
+  }
+}

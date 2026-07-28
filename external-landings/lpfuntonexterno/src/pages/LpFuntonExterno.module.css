@@ -1,0 +1,20 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f2e8;
+  color: #1a1a1a;
+  font-family: "JUST Sans", "JUST Sans Regular", Arial, sans-serif;
+  text-align: left;
+}
+
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+.page img,
+.page video {
+  max-width: 100%;
+}

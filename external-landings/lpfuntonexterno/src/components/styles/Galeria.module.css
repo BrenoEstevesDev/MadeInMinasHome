@@ -1,0 +1,196 @@
+.galeria {
+  width: 100%;
+  padding: 0 18px clamp(76px, 10vw, 132px);
+}
+
+.galeriaContainer {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  max-width: 780px;
+  margin-bottom: clamp(30px, 5vw, 56px);
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #9b4420;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: "Playfair Display", "Abril Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 5.1rem);
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.gridContainer {
+  column-count: 4;
+  column-gap: 18px;
+}
+
+.projectCard {
+  display: block;
+  width: 100%;
+  margin: 0 0 18px;
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e0d8b8;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #e0d8b8;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 260ms ease;
+}
+
+.projectCard:hover .image {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 26, 26, 0.38);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.projectCard:hover .overlay {
+  opacity: 1;
+}
+
+.viewButton,
+.allButton {
+  border: 1px solid rgba(74, 90, 42, 0.28);
+  border-radius: 8px;
+  background: rgba(245, 242, 232, 0.94);
+  color: #1a1a1a;
+  cursor: pointer;
+  font-weight: 800;
+  transition: background 180ms ease, border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.viewButton {
+  padding: 12px 28px;
+  font-size: 0.95rem;
+}
+
+.allButton {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+}
+
+.viewButton:hover,
+.allButton:hover {
+  transform: translateY(-1px);
+  border-color: #9b4420;
+  background: #ffffff;
+}
+
+.viewButton:focus-visible,
+.allButton:focus-visible,
+.closeButton:focus-visible {
+  outline: 3px solid #9b4420;
+  outline-offset: 2px;
+}
+
+.bottomCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.modalContent {
+  position: relative;
+  max-width: min(1000px, 94vw);
+  max-height: 92vh;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(245, 242, 232, 0.94);
+  color: #1a1a1a;
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  background: #f5f2e8;
+}
+
+@media (max-width: 1180px) {
+  .gridContainer {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 760px) {
+  .gridContainer {
+    column-count: 2;
+    column-gap: 14px;
+  }
+
+  .projectCard {
+    margin-bottom: 14px;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    padding-inline: 12px;
+  }
+
+  .gridContainer {
+    column-count: 1;
+  }
+}

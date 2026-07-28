@@ -1,0 +1,211 @@
+.fabricSection {
+  width: 100%;
+  padding: clamp(84px, 11vw, 148px) clamp(18px, 7vw, 128px);
+  background: #f7f7f5;
+}
+
+.fabricLayout {
+  width: min(1220px, 100%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #a75631;
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.fabricLayout h2,
+.darkHeader h2 {
+  margin: 0;
+  font-family: "Playfair Display", "Abril Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 5.1rem);
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.fabricLayout h2 {
+  max-width: 1110px;
+  color: #1a1a1a;
+  font-size: clamp(3.1rem, 7vw, 6.6rem);
+}
+
+.fabricIntro p:not(.eyebrow) {
+  max-width: 1060px;
+  margin: 28px 0 0;
+  color: rgba(26, 26, 26, 0.76);
+  font-size: clamp(1.08rem, 2vw, 1.52rem);
+  line-height: 1.78;
+}
+
+.fabricCards {
+  display: grid;
+  gap: clamp(54px, 7vw, 86px);
+  max-width: 1060px;
+  margin-top: clamp(80px, 10vw, 128px);
+}
+
+.fabricCard {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.fabricCard svg {
+  width: clamp(28px, 3vw, 36px);
+  height: clamp(28px, 3vw, 36px);
+  color: #a75631;
+  stroke-width: 1.8;
+}
+
+.fabricCard h3 {
+  margin: clamp(36px, 5vw, 58px) 0 0;
+  color: #1a1a1a;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.fabricCard p {
+  margin: 20px 0 0;
+  color: rgba(26, 26, 26, 0.68);
+  font-size: clamp(1.08rem, 2vw, 1.45rem);
+  line-height: 1.78;
+}
+
+.videoSection {
+  width: 100%;
+  padding: clamp(72px, 9vw, 118px) clamp(18px, 4vw, 56px);
+  background: #1a1a1a;
+  color: #f7f2e8;
+}
+
+.darkHeader {
+  width: min(1180px, 100%);
+  margin: 0 auto clamp(30px, 5vw, 52px);
+}
+
+.darkHeader h2,
+.videoCard h3 {
+  color: #f7f2e8;
+}
+
+.videoGrid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.videoCard video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 620px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(245, 242, 232, 0.18);
+  background: #0e0e0e;
+}
+
+.videoCard h3 {
+  margin: 16px 0 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.processSection {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: clamp(76px, 10vw, 132px) 0;
+}
+
+.processHeader {
+  margin-bottom: clamp(18px, 3vw, 28px);
+}
+
+.stepList {
+  border-top: 1px solid rgba(74, 90, 42, 0.22);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 60px);
+  align-items: start;
+  padding: clamp(24px, 4vw, 44px) 0;
+  border-bottom: 1px solid rgba(74, 90, 42, 0.22);
+}
+
+.step span {
+  display: block;
+  color: rgba(26, 26, 26, 0.2);
+  font-family: "Playfair Display", "Abril Display", Georgia, serif;
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  line-height: 0.9;
+}
+
+.step h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.step p {
+  margin: 12px 0 0;
+  color: rgba(26, 26, 26, 0.68);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+@media (max-width: 920px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .videoCard video {
+    max-height: 560px;
+  }
+
+  .step {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .fabricSection {
+    padding: 72px 20px 84px;
+  }
+
+  .fabricLayout h2 {
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+  }
+
+  .fabricIntro p:not(.eyebrow) {
+    margin-top: 22px;
+  }
+
+  .fabricCards {
+    gap: 48px;
+    margin-top: 64px;
+  }
+
+  .fabricCard h3 {
+    margin-top: 28px;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .step span {
+    font-size: 3.2rem;
+  }
+}

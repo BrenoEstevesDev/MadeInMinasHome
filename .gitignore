@@ -1,0 +1,3 @@
+external-landings/*/node_modules/
+external-landings/*/dist/
+wordpress/*.zip

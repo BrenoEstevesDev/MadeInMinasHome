@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sora:wght@100..800&display=swap');
+
+@import url("https://use.typekit.net/vlq1hhu.css");
+
+@font-face {
+    font-family: 'JUST Sans Regular';
+    src: url('./components/assets/fonts/JUST Sans Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+    --primary: #731C2C;
+    --primary-dark: #181818;
+    --bg-dark: #181818;
+    --bg-light: #F4F8E9;
+    --text-dark: #111;
+    --text-light: #fff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.3);
+    --radius: 15px;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+    margin: 0;
+    font-family: 'JUST Sans Regular', sans-serif;
+    background-color: var(--bg-light);
+}
+
+h1{
+      font-family: 'abril-text';
+      font-weight: 400;
+      font-style: normal;
+
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

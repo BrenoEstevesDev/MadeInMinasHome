@@ -1,0 +1,122 @@
+.hero {
+  background-image: url("../img/hero/hero-futon.JPEG");
+  background-position: center calc(50% + var(--hero-y, 0px));
+  background-size: cover;
+  color: #fff;
+  min-height: clamp(680px, calc(100vh - var(--header-height) - 74px), 760px);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(23, 24, 19, 0.74) 0%, rgba(23, 24, 19, 0.44) 43%, rgba(23, 24, 19, 0.14) 100%);
+  inset: 0;
+  position: absolute;
+}
+
+.hero::after {
+  background: radial-gradient(circle at 70% 42%, rgba(255, 255, 255, 0.08), transparent 34%);
+  content: "";
+  inset: 0;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+}
+
+.hero-content {
+  max-width: 880px;
+  padding: clamp(92px, 13vh, 170px) 0 84px var(--side);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  color: #ffe4d0;
+}
+
+.hero h1 {
+  font-size: clamp(54px, 5.2vw, 92px);
+}
+
+.hero-copy {
+  font-family: var(--font-serif);
+  font-size: clamp(19px, 1.35vw, 24px);
+  line-height: 1.45;
+  margin-top: 30px;
+  max-width: 680px;
+}
+
+.hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.hero-stamp {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  bottom: 44px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  justify-content: center;
+  position: absolute;
+  right: clamp(34px, 6vw, 112px);
+  rotate: -8deg;
+  width: 130px;
+  z-index: 1;
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.hero-stamp:hover {
+  opacity: 0.88;
+  transform: rotate(4deg) scale(1.03);
+}
+
+.hero-stamp span {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-stamp strong {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 86px var(--side) 108px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 52px);
+    max-width: 330px;
+  }
+
+  .hero-copy {
+    font-size: 18px;
+    max-width: 320px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-stamp {
+    display: none;
+  }
+}

@@ -1,0 +1,55 @@
+.StylesButton {
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 100px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.StylesButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.mobileCtaButton {
+  display: none;
+}
+
+/* ===== TABLET/PORTRAIT ===== */
+@media (max-width: 1180px) {
+  .StylesButton {
+    padding: 10px 18px;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .StylesButton {
+    display: none;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .StylesButton {
+    display: none;
+  }
+
+  .mobileCtaButton {
+    display: block !important;
+    background: var(--primary) !important;
+    color: white !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem !important;
+    margin-top: 20px;
+  }
+}
